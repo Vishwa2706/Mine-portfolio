@@ -6,7 +6,7 @@ const sass = require("sass");
 
 const root = path.resolve(__dirname, "..");
 const source = path.join(root, "src");
-const output = path.join(root, "build");
+const output = path.join(root, "public");
 const watch = process.argv.includes("--watch");
 const production = process.argv.includes("--production");
 

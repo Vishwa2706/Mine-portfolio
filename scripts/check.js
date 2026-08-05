@@ -2,7 +2,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 
 const root = path.resolve(__dirname, "..");
-const htmlPath = path.join(root, "build", "index.html");
+const htmlPath = path.join(root, "public", "index.html");
 if (!fs.existsSync(htmlPath)) throw new Error("Run npm run build before npm run check.");
 
 const html = fs.readFileSync(htmlPath, "utf8");

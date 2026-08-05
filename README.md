@@ -1,6 +1,6 @@
 # Vishwa S — Software Developer Portfolio
 
-Professional static portfolio for Vishwa S, focused on Angular, ASP.NET Core and enterprise application engineering. `src/` is the single source of truth; `build/` is generated and is the Vercel output directory.
+Professional static portfolio for Vishwa S, focused on Angular, ASP.NET Core and enterprise application engineering. `src/` is the single source of truth; `public/` is generated and is the Vercel output directory.
 
 ## Local development
 
@@ -24,7 +24,7 @@ npm run check
 
 On Windows with Microsoft Edge installed, `npm run check:visual` runs the responsive and interaction suite. Set `PLAYWRIGHT_EXECUTABLE_PATH` to another Chromium executable when needed.
 
-Do not edit `build/` directly. Edit the Pug templates, Sass, or JavaScript under `src/`, then rebuild.
+Do not edit `public/` directly. Edit the Pug templates, Sass, or JavaScript under `src/`, then rebuild.
 
 ## Resume asset
 
@@ -34,7 +34,7 @@ Add the real resume PDF at:
 src/resume/Vishwa-S-Resume.pdf
 ```
 
-The build copies it to `build/resume/Vishwa-S-Resume.pdf`. The file is intentionally not fabricated when the source PDF is unavailable.
+The build copies it to `public/resume/Vishwa-S-Resume.pdf`. The file is intentionally not fabricated when the source PDF is unavailable.
 
 ## Contact form and Vercel
 
@@ -50,4 +50,4 @@ Copy `.env.example` to `.env.local` only for local function testing and supply r
 
 ## Deployment
 
-Vercel uses `npm run build`, publishes `build/`, and deploys `api/contact.js` as a serverless function. Add the resume before the production deployment if download functionality is required.
+Vercel uses `npm run build`, publishes `public/`, and deploys `api/contact.js` as a serverless function. Add the resume before the production deployment if download functionality is required.
