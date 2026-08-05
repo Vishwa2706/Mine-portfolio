@@ -1,0 +1,21 @@
+{
+  "name": "vishwa-s-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Professional portfolio for Vishwa S, an Angular and ASP.NET Core Software Developer.",
+  "scripts": {
+    "dev": "node scripts/build.js --watch",
+    "build:dev": "node scripts/build.js",
+    "build": "node scripts/build.js --production",
+    "check": "node scripts/check.js",
+    "check:visual": "node scripts/visual-check.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.62.1",
+    "pug": "^3.0.3",
+    "sass": "^1.90.0"
+  }
+}

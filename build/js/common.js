@@ -1,284 +1,149 @@
-// svg icons support ie11
 (function () {
-    svg4everybody();
-})();
+  "use strict";
 
-// check if touch device
-function isTouchDevice() {
-    var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
-    var mq = function mq(query) {
-        return window.matchMedia(query).matches;
-    };
-    if ('ontouchstart' in window || window.DocumentTouch && document instanceof DocumentTouch) {
-        return true;
-    }
-    var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
-    return mq(query);
-}
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var coarsePointer = window.matchMedia("(hover: none), (pointer: coarse)");
+  var navToggle = document.querySelector(".js-nav-toggle");
+  var navMenu = document.querySelector(".js-nav-menu");
 
-if (isTouchDevice()) {
-    $('body').addClass('touch-device');
-}
+  document.documentElement.classList.add("js-enabled");
 
-// header
-(function () {
-    var header = $('.js-header'),
-        burger = header.find('.js-header-burger'),
-        wrapper = header.find('.js-header-wrapper'),
-        html = $('html'),
-        body = $('body');
-    burger.on('click', function () {
-        burger.toggleClass('active');
-        wrapper.toggleClass('visible');
-        html.toggleClass('no-scroll');
-        body.toggleClass('no-scroll');
+  function closeNavigation() {
+    if (!navToggle || !navMenu) return;
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Open navigation menu");
+    navMenu.classList.remove("is-open");
+    document.body.classList.remove("no-scroll");
+  }
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", function () {
+      var open = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!open));
+      navToggle.setAttribute("aria-label", open ? "Open navigation menu" : "Close navigation menu");
+      navMenu.classList.toggle("is-open", !open);
+      document.body.classList.toggle("no-scroll", !open);
     });
-})();
-
-// carousel arrows
-var navArrows = ['\n    <span><svg class="icon icon-arrow-prev">\n        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arrow-prev"></use>\n    </svg></span>', '<span><svg class="icon icon-arrow-next">\n        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arrow-next"></use>\n    </svg></span>'];
-
-// owl carousel
-$(document).ready(function () {
-    var slider = $('.js-slider-details');
-
-    slider.owlCarousel({
-        items: 3,
-        nav: true,
-        navElement: 'button',
-        navText: navArrows,
-        dots: false,
-        loop: true,
-        smartSpeed: 700,
-        responsive: {
-            320: {
-                items: 1
-            },
-            768: {
-                items: 2
-            },
-            1024: {
-                items: 3
-            }
-        }
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
+        closeNavigation();
+        navToggle.focus();
+      }
     });
+  }
 
-    // slider.on('changed.owl.carousel', function(event) {
-    //     const items = slider.find('.owl-item');
-    //     items.removeClass('left');
-    //     items.eq(event.item.index).prevAll().addClass('left');
-
-    // });
-
-    // $(document).on('click', '.owl-item', function(){
-    //     itemsIndex = $(this).index();
-    //     slider.trigger('to.owl.carousel', itemsIndex);
-    // });
-
-    $('.js-slider-review').owlCarousel({
-        items: 1,
-        nav: true,
-        navElement: 'button',
-        navText: navArrows,
-        dots: false,
-        loop: true,
-        smartSpeed: 700,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        responsive: {
-            320: {
-                nav: false,
-                dots: true
-            },
-            768: {
-                nav: true,
-                dots: false
-            }
-        }
+  document.querySelectorAll(".js-scroll").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      var target = document.querySelector(link.getAttribute("href"));
+      if (!target) return;
+      event.preventDefault();
+      closeNavigation();
+      target.scrollIntoView({ behavior: reduceMotion.matches ? "auto" : "smooth", block: "start" });
+      window.setTimeout(function () {
+        target.setAttribute("tabindex", "-1");
+        target.focus({ preventScroll: true });
+      }, reduceMotion.matches ? 0 : 500);
     });
+  });
 
-    $('.js-slider-cases').owlCarousel({
-        items: 2,
-        nav: true,
-        navElement: 'button',
-        navText: navArrows,
-        dots: false,
-        loop: true,
-        smartSpeed: 700,
-        responsive: {
-            320: {
-                nav: false,
-                dots: true,
-                items: 1
-            },
-            768: {
-                nav: true,
-                dots: false,
-                items: 2
-            }
-        }
+  if (typeof AOS !== "undefined") {
+    document.documentElement.classList.add("aos-ready");
+    AOS.init({ duration: 700, once: true, disable: reduceMotion.matches });
+  }
+
+  if (!reduceMotion.matches && !coarsePointer.matches && typeof simpleParallax !== "undefined") {
+    document.querySelectorAll(".js-parallax").forEach(function (element) {
+      new simpleParallax(element, {
+        scale: parseFloat(element.dataset.scale || "1.2"),
+        orientation: element.dataset.orientation || "up",
+        delay: 0.5,
+        overflow: true,
+        transition: "cubic-bezier(0,0,0,1)"
+      });
     });
-});
+  }
 
-// owl carousel
-(function () {
-    var slider = $('.js-owl');
-    if (slider.length) {
-        slider.each(function () {
-            var _this = $(this),
-                itemsMobileAlbum = _this.data('items-mobile-album'),
-                itemsMobilePortrait = _this.data('items-mobile-portrait');
-            console.log(itemsMobileAlbum);
-            if (itemsMobileAlbum && itemsMobilePortrait) {
-                owlMobileAlbum(_this, itemsMobileAlbum, itemsMobilePortrait);
-                $(window).resize(function () {
-                    owlMobileAlbum(_this, itemsMobileAlbum, itemsMobilePortrait);
-                });
-            }
-            if (!itemsMobileAlbum && itemsMobilePortrait) {
-                owlMobilePortrait(_this, itemsMobilePortrait);
-                $(window).resize(function () {
-                    owlMobilePortrait(_this, itemsMobilePortrait);
-                });
-            }
-        });
+  var cursor = document.querySelector(".cursor");
+  if (cursor && !reduceMotion.matches && !coarsePointer.matches) {
+    var cursorX = -20;
+    var cursorY = -20;
+    document.addEventListener("mousemove", function (event) {
+      cursorX = event.clientX;
+      cursorY = event.clientY;
+    }, { passive: true });
+    (function renderCursor() {
+      cursor.style.transform = "translate3d(" + cursorX + "px," + cursorY + "px,0)";
+      window.requestAnimationFrame(renderCursor);
+    }());
+  } else if (cursor) {
+    cursor.hidden = true;
+  }
+
+  var year = document.querySelector(".js-year");
+  if (year) year.textContent = new Date().getFullYear();
+
+  var form = document.querySelector(".js-contact-form");
+  if (!form) return;
+
+  var submitButton = form.querySelector("button[type='submit']");
+  var status = form.querySelector(".js-form-status");
+  var messages = {
+    name: "Enter your name (2–80 characters).",
+    email: "Enter a valid email address.",
+    subject: "Enter a subject (3–120 characters).",
+    message: "Enter a message (10–3000 characters)."
+  };
+
+  function validateField(field) {
+    if (field.name === "companyWebsite") return true;
+    var error = document.getElementById(field.name + "-error");
+    var valid = field.checkValidity();
+    field.setAttribute("aria-invalid", String(!valid));
+    if (error) error.textContent = valid ? "" : messages[field.name];
+    return valid;
+  }
+
+  form.querySelectorAll("input:not([name='companyWebsite']), textarea").forEach(function (field) {
+    field.addEventListener("blur", function () { validateField(field); });
+    field.addEventListener("input", function () {
+      if (field.getAttribute("aria-invalid") === "true") validateField(field);
+    });
+  });
+
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    var fields = Array.from(form.querySelectorAll("input, textarea"));
+    var valid = fields.every(validateField);
+    if (!valid) {
+      status.textContent = "Please correct the highlighted fields.";
+      var firstInvalid = form.querySelector("[aria-invalid='true']");
+      if (firstInvalid) firstInvalid.focus();
+      return;
     }
 
-    // mobile album
-    function owlMobileAlbum(obj, itemsMobileAlbum, itemsMobilePortrait) {
-        var optionLoop = true;
-        if (obj.is('[data-no-loop]')) {
-            optionLoop = false;
-        }
-        var optionAutoHeight = false;
-        if (obj.is('[data-autoheight]')) {
-            optionAutoHeight = true;
-        }
-        var fullWidth = window.innerWidth;
-        if (navigator.platform.indexOf('Win') > -1) {
-            var mobilePoint = 766; // windows
-        } else {
-            var mobilePoint = 767; // mac os
-        }
-        // console.log(mobilePoint); 
-        if (fullWidth <= mobilePoint) {
-            if (!obj.hasClass('owl-carousel')) {
-                obj.addClass('owl-carousel');
-                obj.owlCarousel({
-                    items: itemsMobileAlbum,
-                    nav: false,
-                    dots: true,
-                    loop: optionLoop,
-                    smartSpeed: 600,
-                    autoHeight: optionAutoHeight,
-                    responsive: {
-                        0: {
-                            items: itemsMobilePortrait
-                        },
-                        480: {
-                            items: itemsMobileAlbum
-                        }
-                    }
-                });
-            }
-        } else {
-            obj.removeClass('owl-carousel');
-            obj.trigger('destroy.owl.carousel');
-        }
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending…";
+    status.className = "form-status js-form-status is-loading";
+    status.textContent = "Sending your message…";
+
+    try {
+      var response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.fromEntries(new FormData(form).entries()))
+      });
+      var result = await response.json().catch(function () { return {}; });
+      if (!response.ok) throw new Error(result.error || "Message delivery failed.");
+      form.reset();
+      fields.forEach(function (field) { field.removeAttribute("aria-invalid"); });
+      status.className = "form-status js-form-status is-success";
+      status.textContent = "Thanks — your message has been sent.";
+    } catch (error) {
+      status.className = "form-status js-form-status is-error";
+      status.textContent = "I couldn’t send that message. Please try again or use the email link.";
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "Send Message";
     }
-
-    // mobile portrait
-    function owlMobilePortrait(obj, itemsMobilePortrait) {
-        var optionLoop = true;
-        if (obj.is('[data-no-loop]')) {
-            optionLoop = false;
-        }
-        var optionAutoHeight = false;
-        if (obj.is('[data-autoheight]')) {
-            optionAutoHeight = true;
-        }
-        var windowWidth = $(window).width();
-        if (windowWidth <= 479) {
-            if (!obj.hasClass('owl-carousel')) {
-                obj.addClass('owl-carousel');
-                obj.owlCarousel({
-                    items: itemsMobilePortrait,
-                    nav: false,
-                    dots: true,
-                    smartSpeed: 600,
-                    loop: optionLoop,
-                    autoHeight: optionAutoHeight
-                });
-            }
-        } else {
-            obj.removeClass('owl-carousel');
-            obj.trigger('destroy.owl.carousel');
-        }
-    }
-})();
-
-// aos animation
-AOS.init();
-
-// parallax effect
-(function () {
-    var parallax = $('.js-parallax');
-    if (parallax.length) {
-        parallax.each(function () {
-            var _this = $(this),
-                scale = _this.data('scale'),
-                orientation = _this.data('orientation');
-
-            new simpleParallax(_this[0], {
-                scale: scale,
-                orientation: orientation,
-                delay: .5,
-                overflow: true,
-                transition: 'cubic-bezier(0,0,0,1)'
-            });
-        });
-    }
-})();
-
-// scroll to section
-(function () {
-    var btn = $('.js-scroll');
-    btn.click(function () {
-        $("html, body").animate({
-            scrollTop: $($(this).attr("href")).offset().top + "px"
-        }, {
-            duration: 1000
-        });
-        return false;
-    });
-})();
-
-// set the starting position of the cursor outside of the screen
-var clientX = -100;
-var clientY = -100;
-var innerCursor = document.querySelector(".cursor");
-
-var initCursor = function initCursor() {
-    // add listener to track the current mouse position
-    document.addEventListener("mousemove", function (e) {
-        clientX = e.clientX;
-        clientY = e.clientY;
-    });
-
-    // transform the innerCursor to the current mouse position
-    // use requestAnimationFrame() for smooth performance
-    var render = function render() {
-        innerCursor.style.transform = 'translate(' + clientX + 'px, ' + clientY + 'px)';
-        // if you are already using TweenMax in your project, you might as well
-        // use TweenMax.set() instead
-        // TweenMax.set(innerCursor, {
-        //   x: clientX,
-        //   y: clientY
-        // });
-
-        requestAnimationFrame(render);
-    };
-    requestAnimationFrame(render);
-};
-
-initCursor();
+  });
+}());

@@ -1,1192 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Vishwa portfolio</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta name="format-detection" content="telephone=no" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="img/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="img/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="img/favicon-16x16.png"
-    />
-    <link rel="manifest" href="img/site.webmanifest" />
-    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta
-      name="description"
-      content="Production-ready Portfolio and Case Study Template for Visual Designers"
-    />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@ui8" />
-    <meta name="twitter:title" content="Folio Designer" />
-    <meta
-      name="twitter:description"
-      content="Production-ready Portfolio and Case Study Template for Visual Designers"
-    />
-    <meta name="twitter:creator" content="@ui8" />
-    <meta
-      name="twitter:image"
-      content="https://ui8-folio.herokuapp.com/img/twitter-card.jpg"
-    />
-    <meta property="og:title" content="Folio Designer" />
-    <meta property="og:type" content="Article" />
-    <meta
-      property="og:url"
-      content="https://ui8.net/ui8/products/folio-designer"
-    />
-    <meta
-      property="og:image"
-      content="https://ui8-folio.herokuapp.com/img/fb-og-image.jpg"
-    />
-    <meta
-      property="og:description"
-      content="Production-ready Portfolio and Case Study Template for Visual Designers"
-    />
-    <meta property="og:site_name" content="Folio Designer" />
-    <meta property="fb:admins" content="132951670226590" />
-    <link rel="stylesheet" media="all" href="css/app.css" />
-    <script>
-      var viewportmeta = document.querySelector('meta[name="viewport"]');
-      if (viewportmeta) {
-        if (screen.width < 375) {
-          var newScale = screen.width / 375;
-          viewportmeta.content =
-            "width=375, minimum-scale=" +
-            newScale +
-            ", maximum-scale=1.0, user-scalable=no, initial-scale=" +
-            newScale +
-            "";
-        } else {
-          viewportmeta.content =
-            "width=device-width, maximum-scale=1.0, initial-scale=1.0";
-        }
-      }
-    </script>
+    <meta charset="utf-8">
+    <title>Vishwa S | Angular &amp; ASP.NET Core Software Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Vishwa S is a Software Developer specializing in Angular and ASP.NET Core enterprise applications, secure APIs and distributed systems.">
+    <meta name="theme-color" content="#4c40f7">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vishwa S | Software Developer">
+    <meta name="twitter:description" content="Angular and ASP.NET Core developer building scalable enterprise applications.">
+    <meta name="twitter:image" content="img/bg-main.jpg">
+    <meta property="og:title" content="Vishwa S | Software Developer">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/bg-main.jpg">
+    <meta property="og:description" content="Angular and ASP.NET Core developer building scalable enterprise applications.">
+    <meta property="og:site_name" content="Vishwa S Portfolio">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg?v=2">
+    <link rel="alternate icon" type="image/x-icon" href="img/favicon.ico?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="stylesheet" media="all" href="css/app.css">
   </head>
   <body>
-    <div class="page">
-      <div class="main">
-        <div class="header js-header" id="header">
-          <div class="header__center center">
-            <a class="header__logo" href="index.html"
-              ><img class="header__pic" src="img/logo.svg" alt=""
-            /></a>
-            <div class="header__social header__social_main">
-              <a
-                class="header__link"
-                href="https://github.com/Vishwa2706?tab=repositories"
-                ><svg class="icon icon-dribbble">
-                  <use xlink:href="img/sprite.svg#icon-profile"></use></svg
-                >github</a
-              ><a
-                class="header__link"
-                href="https://www.linkedin.com/in/s-vishwa-4374b4287/"
-                ><svg class="icon icon-instagram">
-                  <use xlink:href="img/sprite.svg#icon-profile"></use></svg
-                >linkedin</a
-              >
-            </div>
-            <button class="header__burger js-header-burger"></button>
-          </div>
-          <div class="header__wrapper js-header-wrapper">
-            <div class="header__preview">
-              <a class="header__logo" href="index.html"
-                ><img class="header__pic" src="img/logo-white.svg" alt=""
-              /></a>
-              <div class="header__img">
-                <img class="header__pic" src="img/bg-header.png" alt="" />
-              </div>
-            </div>
-            <div class="header__center center">
-              <div class="header__contacts">
-                <a class="header__line" href="mailto:vishwajayanth3@gmail.com">
-                  <div class="header__icon">
-                    <svg class="icon icon-email">
-                      <use xlink:href="img/sprite.svg#icon-email"></use>
-                    </svg>
-                  </div>
-                  <div class="header__text">vishwajayanth3@gmail.com</div>
-                </a>
-                <div class="header__line">
-                  <div class="header__icon">
-                    <svg class="icon icon-place">
-                      <use xlink:href="img/sprite.svg#icon-place"></use>
-                    </svg>
-                  </div>
-                  <div class="header__text">
-                    <p>Ranipet, Tamil Nadu</p>
-                    <p>India ✌️</p>
-                  </div>
-                </div>
-                <a class="header__line" href="tel:+91 9345321016">
-                  <div class="header__icon">
-                    <svg class="icon icon-phone">
-                      <use xlink:href="img/sprite.svg#icon-phone"></use>
-                    </svg>
-                  </div>
-                  <div class="header__text">+91 934 532 1016</div>
-                </a>
-              </div>
-              <nav class="header__nav">
-                <a class="header__item" href="#"><span>About</span></a
-                ><a class="header__item" href="#"><span>Work</span></a
-                ><a class="header__item" href="#"><span>Services</span></a
-                ><a class="header__item" href="mailto:vishwajayanth3@gmail.com"
-                  ><span>Contact</span></a
-                >
-              </nav>
-              <div class="header__social header__social_inner">
-                <a
-                  class="header__link"
-                  href="https://www.linkedin.com/in/s-vishwa-4374b4287/"
-                  ><svg class="icon icon-dribbble">
-                    <use xlink:href="img/sprite.svg#icon-dribbble"></use></svg
-                  >linkedin</a
-                ><a
-                  class="header__link"
-                  href="https://www.instagram.com/vishwa._s._/"
-                  ><svg class="icon icon-instagram">
-                    <use xlink:href="img/sprite.svg#icon-instagram"></use></svg
-                  >Instagram</a
-                >
-              </div>
-            </div>
-          </div>
+    <div class="page"><a class="skip-link" href="#about">Skip to main content</a>
+      <header class="site-header" id="top">
+        <div class="center site-header__inner"><a class="brand js-scroll" href="#top" aria-label="Vishwa S — home">VS</a>
+          <nav class="site-nav" aria-label="Primary navigation">
+            <button class="site-nav__toggle js-nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu"><span></span><span></span></button>
+            <ul class="site-nav__menu js-nav-menu" id="site-menu">
+              <li><a class="js-scroll" href="#about">About</a></li>
+              <li><a class="js-scroll" href="#experience">Experience</a></li>
+              <li><a class="js-scroll" href="#work">Work</a></li>
+              <li><a class="js-scroll" href="#skills">Skills</a></li>
+              <li><a class="js-scroll" href="#contact">Contact</a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="main__bg">
-          <img class="main__pic" src="img/bg-main.jpg" alt="" />
-        </div>
-        <div class="main__center center">
-          <div class="main__wrap">
-            <div class="main__stage stage" data-aos="transform">Vishwa S</div>
-            <h1 class="main__title title h1">
-              <span data-aos="transform" data-aos-delay="150">Hello, my</span
-              ><span data-aos="transform" data-aos-delay="300"
-                >name's Vishwa.</span
-              ><span data-aos="transform" data-aos-delay="450"
-                >I'm a Web and App</span
-              ><span data-aos="transform" data-aos-delay="600">Developer.</span>
-            </h1>
-            <a class="scroll js-scroll" href="#details" data-aos="transform">
-              <div class="scroll__icon">
-                <img class="scroll__pic" src="img/scroll.svg" alt="" />
+      </header>
+      <main>
+        <section class="hero" aria-labelledby="hero-title"><img class="hero__background" src="img/bg-main.jpg" alt="" width="1440" height="1000" aria-hidden="true">
+          <div class="center hero__content">
+            <div class="hero__copy">
+              <p class="hero__name" data-aos="transform">Vishwa S</p>
+              <h1 class="hero__title" id="hero-title"><span data-aos="transform" data-aos-delay="100">Software Developer building</span><span data-aos="transform" data-aos-delay="200">scalable enterprise applications</span><span data-aos="transform" data-aos-delay="300">with Angular and ASP.NET Core.</span></h1>
+              <p class="hero__description" data-aos="animation-translate-y" data-aos-delay="400">I build responsive frontends, secure REST APIs, real-time workflows and maintainable distributed systems using Angular, .NET, Clean Architecture and CQRS.</p>
+              <div class="hero__actions" data-aos="animation-translate-y" data-aos-delay="500"><a class="btn btn_purple js-scroll" href="#work">View My Work</a><a class="btn btn_dark" href="resume/Vishwa-S-Resume.pdf" download>Download Resume</a></div>
+            </div>
+          </div>
+          <div class="hero__art" data-aos="hero-cubes" aria-hidden="true">
+            <div class="hero__layer-wrap hero__layer-wrap_1"><img class="hero__layer hero__layer_1" src="img/main-pic-6.png" alt=""></div>
+            <div class="hero__layer-wrap hero__layer-wrap_2"><img class="hero__layer hero__layer_2 js-parallax" src="img/main-pic-1.png" alt="" data-scale="2.5" data-orientation="up"></div>
+            <div class="hero__layer-wrap hero__layer-wrap_3"><img class="hero__layer hero__layer_3 js-parallax" src="img/main-pic-2.png" alt="" data-scale="1.5" data-orientation="up"></div>
+            <div class="hero__layer-wrap hero__layer-wrap_4"><img class="hero__layer hero__layer_4" src="img/main-pic-3.png" alt=""></div>
+            <div class="hero__layer-wrap hero__layer-wrap_5"><img class="hero__layer hero__layer_5" src="img/main-pic-4.png" alt=""></div>
+            <div class="hero__layer-wrap hero__layer-wrap_6"><img class="hero__layer hero__layer_6 js-parallax" src="img/main-pic-5.png" alt="" data-scale="4.5" data-orientation="up"></div>
+            <div class="hero__layer-wrap hero__layer-wrap_7"><img class="hero__layer hero__layer_7 js-parallax" src="img/main-pic-7.png" alt="" data-scale="1.5" data-orientation="down"></div>
+          </div>
+        </section>
+        <section class="section section_light" id="about" aria-labelledby="about-title">
+          <div class="center">
+            <div class="section-heading" data-aos="animation-scale-y">
+              <p class="eyebrow">Core expertise</p>
+              <h2 class="section-title" id="about-title">Engineering clear, dependable products.</h2>
+              <p class="section-intro">Software Developer specializing in Angular and ASP.NET Core, building secure, scalable and maintainable enterprise applications.</p>
+            </div>
+            <div class="expertise-grid">
+              <article class="expertise-card expertise-card_purple" data-aos="animation-translate-y"><span class="card-number">01</span>
+                <h3>Angular Frontend Engineering</h3>
+                <p>Responsive enterprise interfaces using Angular, TypeScript, RxJS, Reactive Forms, reusable components, SCSS, PrimeNG and Jest.</p>
+              </article>
+              <article class="expertise-card expertise-card_orange" data-aos="animation-translate-y" data-aos-delay="120"><span class="card-number">02</span>
+                <h3>ASP.NET Core Backend Engineering</h3>
+                <p>Secure REST APIs and maintainable backend services using C#, ASP.NET Core, Entity Framework Core, LINQ, Clean Architecture, CQRS and MediatR.</p>
+              </article>
+              <article class="expertise-card expertise-card_yellow" data-aos="animation-translate-y" data-aos-delay="240"><span class="card-number">03</span>
+                <h3>Distributed Systems and Application Reliability</h3>
+                <p>Real-time and distributed solutions using SignalR, RabbitMQ, gRPC, Redis, YARP, Serilog, retries, Dead Letter Queues and correlation IDs.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="section section_dark experience" id="experience" aria-labelledby="experience-title">
+          <div class="center">
+            <div class="section-heading" data-aos="animation-scale-y">
+              <p class="eyebrow">Experience</p>
+              <h2 class="section-title" id="experience-title">Building production software across the stack.</h2>
+            </div>
+            <div class="timeline">
+              <article class="timeline__item" data-aos="animation-translate-y">
+                <div class="timeline__marker" aria-hidden="true"></div>
+                <p class="timeline__period">August 2024 – Present</p>
+                <h3>Software Developer</h3>
+                <p class="timeline__company">Propel Technology Group Inc.</p>
+                <p>Contributing across the software development lifecycle by building enterprise applications with Angular and ASP.NET Core. Developing reusable frontend components, secure REST APIs, scalable backend services and reliable distributed workflows while following Clean Architecture, CQRS and engineering best practices.</p>
+              </article>
+              <article class="timeline__item" data-aos="animation-translate-y" data-aos-delay="150">
+                <div class="timeline__marker" aria-hidden="true"></div>
+                <p class="timeline__period">July 2023 – September 2023</p>
+                <h3>Web Development Intern</h3>
+                <p class="timeline__company">DLK Technologies India Private Limited</p>
+                <p>Developed a secure messaging platform with LDAP Active Directory authentication and JWT verification. The work increased user engagement by 75% and reduced manual input by 50%.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="work-intro">
+          <div class="center">
+            <div class="work-intro__copy">
+              <p class="eyebrow">Selected work</p>
+              <h2 class="work-intro__title">Building reliable software from interface to infrastructure.</h2>
+              <p class="work-intro__text">Practical engineering across responsive interfaces, secure APIs and distributed workflows.</p>
+            </div>
+          </div>
+          <div class="work-intro__art" data-aos="animation-scale" aria-hidden="true"><img class="work-intro__layer work-intro__layer_1 js-parallax" src="img/work-cube-1.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.08" data-orientation="up"><img class="work-intro__layer work-intro__layer_2 js-parallax" src="img/work-cube-2.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.1" data-orientation="up left"><img class="work-intro__layer work-intro__layer_3 js-parallax" src="img/work-cube-3.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.12" data-orientation="up right"><img class="work-intro__layer work-intro__layer_4" src="img/work-cube-4.png" alt="" width="1300" height="900" loading="lazy"><img class="work-intro__layer work-intro__layer_5 js-parallax" src="img/work-cube-5.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.08" data-orientation="left"><img class="work-intro__layer work-intro__layer_6 js-parallax" src="img/work-cube-6.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.1" data-orientation="right"><img class="work-intro__layer work-intro__layer_7 js-parallax" src="img/work-cube-7.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.12" data-orientation="down"></div>
+        </section>
+        <section class="section section_gradient" id="work" aria-labelledby="work-title">
+          <div class="center">
+            <div class="section-heading" data-aos="animation-scale-y">
+              <p class="eyebrow">Featured work</p>
+              <h2 class="section-title" id="work-title">Relevant products and contributions.</h2>
+            </div>
+            <div class="project-list">
+              <article class="project-card" data-aos="animation-translate-y">
+                <div class="project-card__visual project-card__visual_purple" aria-hidden="true">
+                  <div class="project-card__orbit"></div><img class="project-cube project-cube_partner-main js-parallax" src="img/work-cube-5.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.08" data-orientation="up"><img class="project-cube project-cube_partner-accent js-parallax" src="img/work-cube-1.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.1" data-orientation="down"><span class="project-card__visual-title">Enterprise Platform</span>
+                </div>
+                <div class="project-card__body">
+                  <p class="project-card__label">Professional Work – Details Only</p>
+                  <h3>Partner Taxation Platform</h3>
+                  <p>An enterprise taxation platform developed using Angular and ASP.NET Core, with complex business workflows, secure APIs, real-time updates and distributed service communication.</p>
+                  <h4>Contribution highlights</h4>
+                  <ul class="check-list">
+                    <li>Built reusable Angular components using RxJS, custom directives and Reactive Forms</li>
+                    <li>Reduced application load time by 40% and CSS redundancy by 30%</li>
+                    <li>Maintained more than 95% Jest unit-test coverage</li>
+                    <li>Implemented SignalR real-time updates and D3.js visualizations</li>
+                    <li>Built secure REST APIs with JWT and permission-based authorization</li>
+                    <li>Used CQRS, MediatR, Clean Architecture, gRPC, RabbitMQ and Redis</li>
+                    <li>Added retry mechanisms, Dead Letter Queues and distributed correlation IDs</li>
+                    <li>Integrated Serilog, FluentValidation, centralized exception handling and Swagger/OpenAPI</li>
+                  </ul>
+                </div>
+              </article>
+              <article class="project-card project-card_reverse" data-aos="animation-translate-y">
+                <div class="project-card__visual project-card__visual_orange" aria-hidden="true">
+                  <div class="project-card__orbit"></div><img class="project-cube project-cube_leave-main js-parallax" src="img/work-cube-7.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.08" data-orientation="down"><img class="project-cube project-cube_leave-accent js-parallax" src="img/work-cube-4.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.1" data-orientation="up"><span class="project-card__visual-title">LeaveTrack</span>
+                </div>
+                <div class="project-card__body">
+                  <p class="project-card__label">In Development</p>
+                  <h3>LeaveTrack</h3>
+                  <p>A role-based leave-management system for Admins, Managers and Employees, built with Angular, ASP.NET Core, PostgreSQL and Entity Framework Core.</p>
+                  <h4>Capabilities</h4>
+                  <ul class="check-list">
+                    <li>Employee, manager and hierarchy management</li>
+                    <li>Leave requests, balances, approval and rejection workflows</li>
+                    <li>JWT authentication and permission-based authorization</li>
+                    <li>SignalR real-time notifications</li>
+                    <li>Clean Architecture and CQRS with MediatR</li>
+                    <li>Redis caching and YARP API Gateway</li>
+                    <li>Optimistic concurrency for competing approvals</li>
+                    <li>Swagger/OpenAPI documentation, Jest and backend automated testing</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="section section_light" id="skills" aria-labelledby="skills-title">
+          <div class="center">
+            <div class="section-heading" data-aos="animation-scale-y">
+              <p class="eyebrow">Skills</p>
+              <h2 class="section-title" id="skills-title">A focused enterprise application toolkit.</h2>
+            </div>
+            <div class="skills-grid">
+              <article class="skill-group" data-aos="animation-translate-y">
+                <h3>Frontend</h3>
+                <p>Angular · TypeScript · JavaScript · RxJS · Reactive Forms · PrimeNG · HTML · CSS · SCSS · Jest · D3.js</p>
+              </article>
+              <article class="skill-group" data-aos="animation-translate-y" data-aos-delay="80">
+                <h3>Backend</h3>
+                <p>C# · ASP.NET Core · RESTful APIs · Microservices · Clean Architecture · CQRS · MediatR · Entity Framework Core · LINQ · FluentValidation</p>
+              </article>
+              <article class="skill-group" data-aos="animation-translate-y" data-aos-delay="160">
+                <h3>Distributed systems</h3>
+                <p>RabbitMQ · gRPC · SignalR · Redis · YARP API Gateway · Correlation IDs · Retry Patterns · Dead Letter Queues</p>
+              </article>
+              <article class="skill-group" data-aos="animation-translate-y">
+                <h3>Security and observability</h3>
+                <p>JWT · Role-Based Access Control · Permission-Based Authorization · Serilog · Centralized Exception Handling · Swagger/OpenAPI</p>
+              </article>
+              <article class="skill-group" data-aos="animation-translate-y" data-aos-delay="80">
+                <h3>Databases and tools</h3>
+                <p>PostgreSQL · Oracle SQL · MySQL · GitHub · GitLab · Azure DevOps · Agile</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <section class="section section_contact" id="contact" aria-labelledby="contact-title">
+          <div class="center contact-layout">
+            <div class="contact-copy">
+              <p class="eyebrow" data-aos="animation-scale-y">Contact</p>
+              <h2 class="section-title" id="contact-title" data-aos="animation-scale-y" data-aos-delay="100">Let’s build something dependable.</h2>
+              <p data-aos="animation-translate-y" data-aos-delay="200">Have a role, product or freelance project in mind? Send the details and I’ll get back to you.</p>
+              <address class="contact-details" data-aos="animation-translate-y" data-aos-delay="250"><a href="mailto:vishwajayanth3@gmail.com">vishwajayanth3@gmail.com</a><a href="tel:+919345321016">+91 9345321016</a><span>Tamil Nadu, India</span><a href="https://github.com/Vishwa2706" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.linkedin.com/in/vishwa-settu/" target="_blank" rel="noopener noreferrer">LinkedIn</a></address>
+            </div>
+            <form class="contact-form js-contact-form" data-aos="animation-translate-y" data-aos-delay="150" novalidate>
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="name-error"><span class="form-error" id="name-error"></span>
               </div>
-              <div class="scroll__text">Scroll down</div>
-            </a>
-          </div>
-        </div>
-        <div class="main__view" data-aos>
-          <div class="main__preview">
-            <img class="main__pic" src="img/main-pic-6.png" alt="" />
-          </div>
-          <div class="main__preview">
-            <img
-              class="main__pic js-parallax"
-              data-scale="2.5"
-              data-orientation="up"
-              src="img/main-pic-1.png"
-              alt=""
-            />
-          </div>
-          <div class="main__preview">
-            <img
-              class="main__pic js-parallax"
-              data-scale="1.5"
-              data-orientation="up"
-              src="img/main-pic-2.png"
-              alt=""
-            />
-          </div>
-          <div class="main__preview">
-            <img class="main__pic" src="img/main-pic-3.png" alt="" />
-          </div>
-          <div class="main__preview">
-            <img class="main__pic" src="img/main-pic-4.png" alt="" />
-          </div>
-          <div class="main__preview">
-            <img
-              class="main__pic js-parallax"
-              data-scale="4.5"
-              data-orientation="up"
-              src="img/main-pic-5.png"
-              alt=""
-            />
-          </div>
-          <div class="main__preview">
-            <img
-              class="main__pic js-parallax"
-              data-scale="1.5"
-              data-orientation="down"
-              src="img/main-pic-7.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="main__figures">
-          <div class="main__figure" data-aos="animation-translate-y">
-            <img
-              class="main__pic js-parallax"
-              data-scale="2.2"
-              data-orientation="down"
-              src="img/figure-1.png"
-              alt=""
-            />
-          </div>
-          <div
-            class="main__figure"
-            data-aos="animation-translate-y"
-            data-aos-delay="200"
-          >
-            <img
-              class="main__pic js-parallax"
-              data-scale="2.2"
-              data-orientation="up"
-              src="img/figure-2.png"
-              alt=""
-            />
-          </div>
-          <div
-            class="main__figure"
-            data-aos="animation-translate-y"
-            data-aos-delay="400"
-          >
-            <img class="main__pic" src="img/figure-3.png" alt="" />
-          </div>
-        </div>
-      </div>
-      <div class="details" id="details">
-        <div class="details__center center">
-          <div class="details__head" data-aos="animation-scale-y">
-            <div class="details__stage stage">What I Do</div>
-            <h3 class="details__info h3">
-              I enjoy creating delightful,  <br />Web App an Mobile App.
-            </h3>
-          </div>
-          <h2 class="details__title" data-aos="animation-scale-y">
-            Think. Make. <br />Solve.
-          </h2>
-          <div class="details__btn" data-aos="animation-translate-y">
-            <button class="btn btn_purple">
-              <span class="btn__text">Contact Me</span
-              ><svg class="icon icon-arrow-right">
-                <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
-              </svg>
-            </button>
-          </div>
-          <div class="details__container">
-            <div class="details__slider owl-carousel js-slider-details">
-              <div class="details__item">
-                <div
-                  class="details__preview details__preview_cursor"
-                  data-aos="animation-scale"
-                >
-                  <div class="details__img">
-                    <img class="details__pic" src="img/cursor.png" alt="" />
-                  </div>
-                </div>
-                <h5 class="details__category h5" data-aos="animation-scale-y">
-                  Web Development
-                </h5>
-                <div class="details__text" data-aos="animation-scale-y">
-                  I'm a full stack web developer with experience in building
-                  responsive and optimized web apps named as Tiktok clone App
-                  and Book town Mern App.
-                </div>
-                <div class="details__btn" data-aos="animation-scale-y">
-                  <button class="btn btn_dark">Find out more</button>
-                </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" autocomplete="email" required maxlength="254" aria-describedby="email-error"><span class="form-error" id="email-error"></span>
               </div>
-              <div class="details__item">
-                <div
-                  class="details__preview details__preview_hand"
-                  data-aos="animation-scale"
-                  data-aos-delay="150"
-                >
-                  <div class="details__img">
-                    <img class="details__pic" src="img/hand.png" alt="" />
-                  </div>
-                </div>
-                <h5
-                  class="details__category h5"
-                  data-aos="animation-scale-y"
-                  data-aos-delay="150"
-                >
-                  Mobile App developement
-                </h5>
-                <div
-                  class="details__text"
-                  data-aos="animation-scale-y"
-                  data-aos-delay="150"
-                >
-                  I develop Both Android and ios app using flutter and Dart and
-                  i can also develop using react native.
-                </div>
-                <div
-                  class="details__btn"
-                  data-aos="animation-scale-y"
-                  data-aos-delay="150"
-                >
-                  <button class="btn btn_dark">Find out more</button>
-                </div>
+              <div class="form-field">
+                <label for="subject">Subject or enquiry type</label>
+                <input id="subject" type="text" name="subject" required minlength="3" maxlength="120" aria-describedby="subject-error"><span class="form-error" id="subject-error"></span>
               </div>
-              <div class="details__item">
-                <div
-                  class="details__preview details__preview_color"
-                  data-aos="animation-scale"
-                  data-aos-delay="300"
-                >
-                  <div class="details__img">
-                    <img
-                      class="details__pic"
-                      src="img/color-picker.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <h5
-                  class="details__category h5"
-                  data-aos="animation-scale-y"
-                  data-aos-delay="300"
-                >
-                  Backend Developement
-                </h5>
-                <div
-                  class="details__text"
-                  data-aos="animation-scale-y"
-                  data-aos-delay="300"
-                >
-                  I have experience developing fast and optimised back-end
-                  systems and APIs and i have Strong knowledege on Node Js.
-                </div>
-                <div
-                  class="details__btn"
-                  data-aos="animation-scale-y"
-                  data-aos-delay="300"
-                >
-                  <button class="btn btn_dark">Find out more</button>
-                </div>
+              <div class="form-field form-field_honeypot" aria-hidden="true">
+                <label for="companyWebsite">Company website</label>
+                <input id="companyWebsite" type="text" name="companyWebsite" tabindex="-1" autocomplete="off">
               </div>
-              <div class="details__item">
-                <div class="details__preview details__preview_cursor">
-                  <div class="details__img">
-                    <img class="details__pic" src="img/hand.png" alt="" />
-                  </div>
-                </div>
-                <h5 class="details__category h5">JavaScript Development</h5>
-                <div class="details__text">
-                  I am solving problems using js regularly in Leetcode to
-                  improve my problem solving skills.
-                </div>
-                <button class="details__btn btn btn_dark">Find out more</button>
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required minlength="10" maxlength="3000" rows="6" aria-describedby="message-error"></textarea><span class="form-error" id="message-error"></span>
               </div>
-              <!-- <div class="details__item">
-                <div class="details__preview details__preview_hand">
-                  <div class="details__img">
-                    <img class="details__pic" src="img/hand.png" alt="" />
-                  </div>
-                </div>
-                <h5 class="details__category h5">User Experience</h5>
-                <div class="details__text">
-                  We have got quite a few already made templates for better
-                  project management that you can use now.
-                </div>
-                <button class="details__btn btn btn_dark">Find out more</button>
-              </div> -->
-              <!-- <div class="details__item">
-                <div class="details__preview details__preview_color">
-                  <div class="details__img">
-                    <img
-                      class="details__pic"
-                      src="img/color-picker.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <h5 class="details__category h5">UI Design Kit</h5>
-                <div class="details__text">
-                  We have got quite a few already made templates for better
-                  project management that you can use now.
-                </div>
-                <button class="details__btn btn btn_dark">Find out more</button>
-              </div> -->
-            </div>
+              <button class="btn btn_purple form-submit" type="submit">Send Message</button>
+              <p class="form-status js-form-status" role="status" aria-live="polite"></p>
+              <p class="form-fallback">If the form is unavailable, email me directly at <a href="mailto:vishwajayanth3@gmail.com">vishwajayanth3@gmail.com</a>.</p>
+            </form>
           </div>
-        </div>
-        <div class="details__figures">
-          <div class="details__figure">
-            <img
-              class="details__pic js-parallax"
-              data-scale="2"
-              data-orientation="down"
-              src="img/figure-1.png"
-              alt=""
-            />
-          </div>
-          <div class="details__figure">
-            <img
-              class="details__pic js-parallax"
-              data-scale="2"
-              data-orientation="up"
-              src="img/figure-2.png"
-              alt=""
-            />
-          </div>
-          <div class="details__figure">
-            <img
-              class="details__pic js-parallax"
-              data-scale="1.2"
-              data-orientation="up"
-              src="img/figure-3.png"
-              alt=""
-            />
-          </div>
-        </div>
-        <a class="details__contact" href="mailto:vishwajayanth3@gmail.com"
-          >Contact me</a
-        >
-      </div>
-      <div class="work">
-        <div class="work__circles"></div>
-        <div class="work__center center">
-          <div class="work__wrap">
-            <div
-              class="work__stage stage stage_pink"
-              data-aos="animation-scale-y"
-            >
-              Experience I have
-            </div>
-            <h2
-              class="work__title title h1"
-              data-aos="animation-scale-y"
-              data-aos-delay="150"
-            >
-              I had done an internship at DLK tech.
-            </h2>
-            <div
-              class="work__text"
-              data-aos="animation-scale-y"
-              data-aos-delay="300"
-            >
-              In DLK technologies, I had took my initial step towards web
-              development and It helped me to learn and mastering frontend
-              development and I had done some frontend projects throughout my
-              internship and this internship helped to get boosting my career as
-              an full stack web developer. YouTube clone website and Amazon
-              clone website are the projects I had done in this intern , this
-              projects can be visible in my github..
-            </div>
-            <a
-              class="scroll js-scroll"
-              data-aos="animation-scale-y"
-              href="#cases"
-            >
-              <div class="scroll__icon">
-                <img class="scroll__pic" src="img/scroll.svg" alt="" />
-              </div>
-              <div class="scroll__text">Scroll down</div>
-            </a>
-          </div>
-        </div>
-        <div class="work__preview">
-          <img
-            class="work__pic js-parallax"
-            data-scale="2"
-            data-orientation="down"
-            src="img/work-cube.png"
-            alt=""
-          />
-        </div>
-        <div class="work__figures" data-aos>
-          <div class="work__figure">
-            <img
-              class="work__pic js-parallax"
-              data-scale="1.3"
-              data-orientation="up"
-              src="img/work-cube-1.png"
-              alt=""
-            />
-          </div>
-          <div class="work__figure">
-            <img
-              class="work__pic js-parallax"
-              data-scale="1.5"
-              data-orientation="up left"
-              src="img/work-cube-2.png"
-              alt=""
-            />
-          </div>
-          <div class="work__figure">
-            <img
-              class="work__pic js-parallax"
-              data-scale="1.3"
-              data-orientation="up right"
-              src="img/work-cube-3.png"
-              alt=""
-            />
-          </div>
-          <div class="work__figure">
-            <img class="work__pic" src="img/work-cube-4.png" alt="" />
-          </div>
-          <div class="work__figure">
-            <img
-              class="work__pic js-parallax"
-              data-scale="1.1"
-              data-orientation="left"
-              src="img/work-cube-5.png"
-              alt=""
-            />
-          </div>
-          <div class="work__figure">
-            <img
-              class="work__pic js-parallax"
-              data-scale="1.2"
-              data-orientation="right"
-              src="img/work-cube-6.png"
-              alt=""
-            />
-          </div>
-          <div class="work__figure">
-            <img
-              class="work__pic js-parallax"
-              data-scale="1.2"
-              data-orientation="down"
-              src="img/work-cube-7.png"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-      <div class="wrapper wrapper_gradient">
-        <div class="cases cases_main" id="cases">
-          <div class="cases__center center">
-            <div class="cases__stage stage" data-aos="animation-scale-y">
-              Portfolio
-            </div>
-            <h2
-              class="cases__title h1"
-              data-aos="animation-scale-y"
-              data-aos-delay="150"
-            >
-              Look at My <br />Projects.
-            </h2>
-            <div
-              class="cases__nav"
-              data-aos="animation-scale-y"
-              data-aos-delay="300"
-            >
-              <a class="cases__link active" href="#">Projects and Demo</a>
-              <!-- <a class="cases__link" href="#">Illustration</a> -->
-              <!-- <a class="cases__link" href="#">Mobile</a> -->
-            </div>
-            <div
-              class="cases__list js-owl"
-              data-items-mobile-portrait="1"
-              data-items-mobile-album="1"
-              data-autoheight
-            >
-              <a
-                class="cases__item"
-                data-aos="animation-translate-y"
-                data-aos-delay=""
-                href="https://mern-chatapp-nu.vercel.app/"
-              >
-                <div class="cases__preview">
-                  <img class="cases__pic" src="img/ChatApp.png" alt="" />
-                  <div class="cases__box">App<br />Demo</div>
-                </div>
-                <div class="cases__body">
-                  <h4 class="cases__info h4">Realtime ChatApp</h4>
-                  <div class="cases__text">
-                    A Real-Time Chat App built with Next.js, NextAuth for
-                    authentication, MongoDB for data storage, Pusher for
-                    real-time communication, and Cloudinary for image storage.
-                    The front end is developed using React and styled with
-                    Tailwind CSS, creating a seamless and responsive user
-                    interface for engaging and dynamic chat experiences.
-                  </div>
-                </div>
-              </a>
-              <a
-                class="cases__item"
-                data-aos="animation-translate-y"
-                data-aos-delay=""
-                href="https://snap-next-app.vercel.app/"
-              >
-                <div class="cases__preview">
-                  <img class="cases__pic" src="img/Snapchat.png" alt="" />
-                  <div class="cases__box">App<br />Demo</div>
-                </div>
-                <div class="cases__body">
-                  <h4 class="cases__info h4">SnapNext App</h4>
-                  <div class="cases__text">
-                    SnapNext is a state-of-the-art web application that utilizes
-                    cutting-edge technologies, including Next.js 14, TypeScript,
-                    MongoDB, Tailwind CSS, and Shadcn. This ensures a smooth and
-                    responsive user experience. With a blend of robust
-                    functionality and a modern design aesthetic, SnapNext
-                    represents the forefront of web development, delivering an
-                    innovative and user-friendly platform.
-                  </div>
-                </div>
-              </a>
-              <a
-                class="cases__item"
-                data-aos="animation-translate-y"
-                data-aos-delay=""
-                href="https://www.linkedin.com/posts/s-vishwa-4374b4287_mern-mongodb-expressjs-activity-7125641940229877760-oPxy?utm_source=share&utm_medium=member_desktop"
-              >
-                <div class="cases__preview">
-                  <img class="cases__pic" src="img/booktown.png" alt="" />
-                  <div class="cases__box">App<br />Demo</div>
-                </div>
-                <div class="cases__body">
-                  <h4 class="cases__info h4">BookTown MERN App</h4>
-                  <div class="cases__text">
-                    Full Stack BookTown App MERN app project named Book Town. In
-                    below video we can be able to see how it works and Book town
-                    is bookstore web which helps for reading, uploading and
-                    editing books when we signup. Books are fetched from my
-                    MongoDB database ,authentications can maintained.
-                  </div>
-                </div> </a
-              ><a
-                class="cases__item"
-                data-aos="animation-translate-y"
-                data-aos-delay="200"
-                href="https://www.linkedin.com/posts/s-vishwa-4374b4287_nextjs-react-typescript-activity-7129629749059997696-VdhW?utm_source=share&utm_medium=member_desktop"
-              >
-                <div class="cases__preview">
-                  <img class="cases__pic" src="img/tiktok.png" alt="" />
-                  <div class="cases__box">App<br />Demo</div>
-                </div>
-                <div class="cases__body">
-                  <h4 class="cases__info h4">TikTok Clone Web App</h4>
-                  <div class="cases__text">
-                    Full Stack TikTok Clone Full Stack TikTok clone using
-                    Next.js, React, TypeScript, Tailwind CSS, Zustand, and
-                    Appwrite. Leverage Next.js for server-side rendering and
-                    routing, React for UI components, TypeScript for type
-                    safety, and Tailwind CSS for styling
-                  </div>
-                </div> </a
-              ><a
-                class="cases__item"
-                data-aos="animation-translate-y"
-                data-aos-delay=""
-                href="https://keeper-app-mocha-ten.vercel.app/"
-              >
-                <div class="cases__preview">
-                  <img class="cases__pic" src="img/keeper.png" alt="" />
-                  <div class="cases__box">App <br />Demo</div>
-                </div>
-                <div class="cases__body">
-                  <h4 class="cases__info h4">React Keeper App</h4>
-                  <div class="cases__text">
-                    Keeper app is a React App project which is clone of google
-                    keeper notes app and It works only on Client side and It is
-                    also Responsive , In this we can add some notes we want to
-                    remember.It uses babel , hooks and props in this project for
-                    ease working
-                  </div>
-                </div> </a
-              ><a
-                class="cases__item"
-                data-aos="animation-translate-y"
-                data-aos-delay="200"
-                href="https://portfolio-2-gray.vercel.app/"
-              >
-                <div class="cases__preview">
-                  <img class="cases__pic" src="img/animated.png" alt="" />
-                  <div class="cases__box">App <br />Demo</div>
-                </div>
-                <div class="cases__body">
-                  <h4 class="cases__info h4">Animated Nextjs Website</h4>
-                  <div class="cases__text">
-                    Next.js Magic: Leveraging the power of Next.js, the website
-                    boasts lightning-fast performance and seamless navigation.
-                    Server-side rendering and automatic code splitting ensure
-                    optimal speed and efficiency.Responsive Across Devices:
-                    Whether you're on a desktop, tablet, or smartphone, the
-                    website adapts gracefully. Responsive design at its finest!
-                  </div>
-                </div> </a
-              ><a
-                class="cases__item"
-                data-aos="animation-translate-y"
-                data-aos-delay=""
-                href="https://vishwa2706.github.io/Drum-kit/"
-              >
-                <div class="cases__preview">
-                  <img class="cases__pic" src="img/drumkit.png" alt="" />
-                  <div class="cases__box">App <br />Demo</div>
-                </div>
-                <div class="cases__body">
-                  <h4 class="cases__info h4">Vischu's Drum Kit</h4>
-                  <div class="cases__text">
-                    This is drum kit website created using javascript and when
-                    the buttons click on keyboard and on mouse it will produce
-                    sound.
-                  </div>
-                </div> </a
-              ><a
-                class="cases__item"
-                data-aos="animation-translate-y"
-                data-aos-delay="200"
-                href="https://tindog-website-using-bootsrap.vercel.app/"
-              >
-                <div class="cases__preview">
-                  <img class="cases__pic" src="img/boot.png" alt="" />
-                  <div class="cases__box">App <br />Demo</div>
-                </div>
-                <div class="cases__body">
-                  <h4 class="cases__info h4">Tindog Website</h4>
-                  <div class="cases__text">
-                    This is website created using html and css and for styling
-                    it fully uses bootstrap framework only and It is alos
-                    responsive.
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="cases__figures">
-            <div class="cases__figure">
-              <img
-                class="cases__pic js-parallax"
-                data-scale="2"
-                data-orientation="down"
-                src="img/figure-2.png"
-                alt=""
-              />
-            </div>
-            <div class="cases__figure">
-              <img
-                class="cases__pic js-parallax"
-                data-scale="1.8"
-                data-orientation="down"
-                src="img/figure-3.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div class="review">
-          <div class="review__center center">
-            <div class="review__stage stage" data-aos="animation-scale-y"></div>
-            <h2
-              class="review__title title h1"
-              data-aos="animation-scale-y"
-              data-aos-delay="200"
-            >
-              Skills <br />
-            </h2>
-            <div
-              class="review__container"
-              data-aos="animation-translate-y"
-              data-aos-delay="400"
-            >
-              <div class="review__slider owl-carousel js-slider-review">
-                <div class="review__item">
-                  <div class="review__text">
-                    <h1>FrontEnd Skills</h1>
-                    Html, Css , bootstrap , Tailwind css, Js , React , jquery ,
-                    Next js.
-                  </div>
-                  <div class="review__author">
-                    <div class="review__ava">
-                      <img class="review__pic" src="img/ava-1.jpg" alt="" />
-                    </div>
-                    <div class="review__details">
-                      <div class="review__man h5">UI Design</div>
-                      <div class="review__company">UI8</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="review__item">
-                  <div class="review__text">
-                    <h1>Backend Skills</h1>
-                    Nodejs, express js, EJS and APIs.
-                  </div>
-                  <div class="review__author">
-                    <div class="review__ava">
-                      <img class="review__pic" src="img/ava-1.jpg" alt="" />
-                    </div>
-                    <div class="review__details">
-                      <div class="review__man h5">sever-side</div>
-                      <div class="review__company">UI8</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="review__item">
-                  <div class="review__text">
-                    <h1>DataBase skills</h1>
-                    MongoDB , mongoose, SQL , PostgreSQL .
-                  </div>
-                  <div class="review__author">
-                    <div class="review__ava">
-                      <img class="review__pic" src="img/ava-1.jpg" alt="" />
-                    </div>
-                    <div class="review__details">
-                      <div class="review__man h5">DB</div>
-                      <div class="review__company">UI8</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="review__item">
-                  <div class="review__text">
-                    <h1>Mobile App Skills</h1>
-                    flutter , dart and react native.
-                  </div>
-                  <div class="review__author">
-                    <div class="review__ava">
-                      <img class="review__pic" src="img/ava-1.jpg" alt="" />
-                    </div>
-                    <div class="review__details">
-                      <div class="review__man h5">mobile apps</div>
-                      <div class="review__company">UI8</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="review__bg">
-            <div class="review__preview">
-              <img
-                class="review__pic js-parallax"
-                data-scale="1.5"
-                data-orientation="down"
-                src="img/review-cube.png"
-                alt=""
-              />
-            </div>
-            <div class="review__preview">
-              <img class="review__pic" src="img/review-cube.png" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="wrapper wrapper_dark">
-          <div class="contacts">
-            <div class="contacts__center center">
-              <div class="contacts__container">
-                <div class="contacts__wrap">
-                  <div
-                    class="contacts__stage stage"
-                    data-aos="animation-scale-y"
-                  >
-                    Say hello 👋
-                  </div>
-                  <h2
-                    class="contacts__title h1"
-                    data-aos="animation-scale-y"
-                    data-aos-delay="200"
-                  >
-                    Let’s Work <br />Together.
-                  </h2>
-                  <div
-                    class="contacts__info"
-                    data-aos="animation-scale-y"
-                    data-aos-delay="400"
-                  >
-                    I’d love to meet up with you to discuss your venture, and
-                    potential collaborations.
-                  </div>
-                </div>
-                <div class="contacts__row">
-                  <div
-                    class="contacts__details"
-                    data-aos="animation-translate-y"
-                  >
-                    <a
-                      class="contacts__line"
-                      href="mailto:vishwajayanth3@gmail.com"
-                    >
-                      <div class="contacts__icon">
-                        <svg class="icon icon-email">
-                          <use xlink:href="img/sprite.svg#icon-email"></use>
-                        </svg>
-                      </div>
-                      <div class="contacts__text">vishwajayanth3@gmail.com</div>
-                    </a>
-                    <div class="contacts__line">
-                      <div class="contacts__icon">
-                        <svg class="icon icon-place">
-                          <use xlink:href="img/sprite.svg#icon-place"></use>
-                        </svg>
-                      </div>
-                      <div class="contacts__text">
-                        <p>1/40, Ranipet-632405</p>
-                        <p>Tamil Nadu , India</p>
-                      </div>
-                    </div>
-                    <a class="contacts__line" href="tel:+91 9345321016">
-                      <div class="contacts__icon">
-                        <svg class="icon icon-phone">
-                          <use xlink:href="img/sprite.svg#icon-phone"></use>
-                        </svg>
-                      </div>
-                      <div class="contacts__text">+91 9345321016</div>
-                    </a>
-                  </div>
-                  <form
-                    class="contacts__form"
-                    data-aos="animation-translate-y"
-                    data-aos-delay="200"
-                  >
-                    <div class="contacts__field field">
-                      <div class="field__wrap">
-                        <input
-                          class="field__input"
-                          type="text"
-                          name="name"
-                          placeholder="Name"
-                        />
-                        <div class="field__icon">
-                          <svg class="icon icon-profile">
-                            <use xlink:href="img/sprite.svg#icon-profile"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="contacts__field field">
-                      <div class="field__wrap">
-                        <input
-                          class="field__input"
-                          type="email"
-                          name="email"
-                          placeholder="Email"
-                        />
-                        <div class="field__icon">
-                          <svg class="icon icon-send">
-                            <use xlink:href="img/sprite.svg#icon-send"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="contacts__field field">
-                      <div class="field__wrap">
-                        <select class="field__select" name="question">
-                          <option>Hire Me</option>
-                          <option>Dm me</option>
-                        </select>
-                        <div class="field__icon">
-                          <svg class="icon icon-arrows">
-                            <use xlink:href="img/sprite.svg#icon-arrows"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="contacts__field field field_textarea">
-                      <div class="field__wrap">
-                        <textarea
-                          class="field__textarea"
-                          name="message"
-                          placeholder="Message"
-                        ></textarea>
-                        <div class="field__icon">
-                          <svg class="icon icon-message">
-                            <use xlink:href="img/sprite.svg#icon-message"></use>
-                          </svg>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="contacts__btn">
-                      <button class="btn btn_purple">
-                        <span class="btn__text">Let’s Talk</span
-                        ><svg class="icon icon-arrow-right">
-                          <use
-                            xlink:href="img/sprite.svg#icon-arrow-right"
-                          ></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                <div class="contacts__category h5">Let’s connect</div>
-                <div class="contacts__social">
-                  <div class="contacts__box" data-aos="animation-translate-y">
-                    <a
-                      class="contacts__link"
-                      href="https://github.com/Vishwa2706?tab=repositories"
-                      ><svg class="icon icon-instagram">
-                        <use xlink:href="img/sprite.svg#icon-dribbble"></use>
-                      </svg>
-                      <div class="contacts__text">github</div>
-                    </a>
-                  </div>
-                  <div
-                    class="contacts__box"
-                    data-aos="animation-translate-y"
-                    data-aos-delay="150"
-                  >
-                    <a
-                      class="contacts__link"
-                      href="https://www.linkedin.com/in/s-vishwa-4374b4287/"
-                      ><svg class="icon icon-instagram">
-                        <use xlink:href="img/sprite.svg#icon-profile"></use>
-                      </svg>
-                      <div class="contacts__text">linkedin</div>
-                    </a>
-                  </div>
-                  <div
-                    class="contacts__box"
-                    data-aos="animation-translate-y"
-                    data-aos-delay="300"
-                  >
-                    <a
-                      class="contacts__link"
-                      href="https://leetcode.com/vischu27/"
-                      ><svg class="icon icon-instagram">
-                        <use xlink:href="img/sprite.svg#icon-dribbble"></use>
-                      </svg>
-                      <div class="contacts__text">leetcode</div>
-                    </a>
-                  </div>
-                  <div
-                    class="contacts__box"
-                    data-aos="animation-translate-y"
-                    data-aos-delay="450"
-                  >
-                    <a
-                      class="contacts__link"
-                      href="https://www.instagram.com/vishwa._s._/"
-                      ><svg class="icon icon-instagram">
-                        <use xlink:href="img/sprite.svg#icon-instagram"></use>
-                      </svg>
-                      <div class="contacts__text">Instagram</div>
-                    </a>
-                  </div>
-                </div>
-                <div class="figures">
-                  <div class="figures__preview">
-                    <img class="figures__pic" src="img/figures-1.png" alt="" />
-                  </div>
-                  <div class="figures__preview">
-                    <img
-                      class="figures__pic js-parallax"
-                      data-scale="1.6"
-                      data-orientation="up"
-                      src="img/figures-2.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="figures__preview">
-                    <img
-                      class="figures__pic js-parallax"
-                      data-scale="1.3"
-                      data-orientation="up"
-                      src="img/figures-3.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="figures__preview">
-                    <img class="figures__pic" src="img/figures-4.png" alt="" />
-                  </div>
-                  <div class="figures__preview">
-                    <img
-                      class="figures__pic js-parallax"
-                      data-scale="2.3"
-                      data-orientation="down"
-                      src="img/figures-5.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="figures__preview">
-                    <img
-                      class="figures__pic js-parallax"
-                      data-scale="2"
-                      data-orientation="up"
-                      src="img/figures-6.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer">
-            <div class="footer__center center">
-              <div class="footer__body">
-                <a class="footer__logo" href="index.html"
-                  ><img class="footer__pic" src="img/logo-empty.svg" alt=""
-                /></a>
-                <div class="footer__wrap">
-                  <div class="footer__title h1">
-                    You only have one chance to make a first impression.
-                  </div>
-                  <div class="footer__info h4">
-                    Let’s make it an amazing one.
-                  </div>
-                </div>
-                <div class="footer__menu">
-                  <a class="footer__link" href="#">About Me</a
-                  ><a class="footer__link" href="#">Projects</a
-                  ><a
-                    class="footer__link"
-                    href="mailto:vishwajayanth3@gmail.com"
-                    >Contact</a
-                  ><a
-                    class="footer__link"
-                    href="https://github.com/Vishwa2706?tab=repositories"
-                    >github</a
-                  ><a
-                    class="footer__link"
-                    href="https://www.instagram.com/mr._.rowdy._._/"
-                    >Instagram</a
-                  >
-                </div>
-              </div>
-              <div class="footer__bottom">
-                <div class="footer__copyright">© 2024, VISHWA LLC.</div>
-                <a class="footer__scroll js-scroll" href="#header"
-                  >Back to top</a
-                >
-              </div>
-            </div>
-            <div class="footer__bg">
-              <div class="footer__preview">
-                <img
-                  class="footer__pic js-parallax"
-                  data-scale="1.5"
-                  data-orientation="down"
-                  src="img/footer-cube-1.png"
-                  alt=""
-                />
-              </div>
-              <div class="footer__preview">
-                <img
-                  class="footer__pic js-parallax"
-                  data-scale="1.8"
-                  data-orientation="up"
-                  src="img/footer-cube-1.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cursor"></div>
+          <div class="contact-art" data-aos="animation-scale" aria-hidden="true"><img class="contact-art__layer contact-art__layer_1" src="img/figures-1.png" alt="" width="900" height="700" loading="lazy"><img class="contact-art__layer contact-art__layer_2 js-parallax" src="img/figures-2.png" alt="" width="900" height="700" loading="lazy" data-scale="1.08" data-orientation="up"><img class="contact-art__layer contact-art__layer_3 js-parallax" src="img/figures-3.png" alt="" width="900" height="700" loading="lazy" data-scale="1.1" data-orientation="down"><img class="contact-art__layer contact-art__layer_4" src="img/figures-4.png" alt="" width="900" height="700" loading="lazy"><img class="contact-art__layer contact-art__layer_5 js-parallax" src="img/figures-5.png" alt="" width="900" height="700" loading="lazy" data-scale="1.12" data-orientation="up"><img class="contact-art__layer contact-art__layer_6 js-parallax" src="img/figures-6.png" alt="" width="900" height="700" loading="lazy" data-scale="1.08" data-orientation="down"></div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <div class="center site-footer__inner">
+          <p>© <span class="js-year"></span> Vishwa S. Built with care.</p><a class="js-scroll" href="#top">Back to top</a>
+        </div><img class="site-footer__cube site-footer__cube_1 js-parallax" src="img/footer-cube-1.png" alt="" width="600" height="500" loading="lazy" data-scale="1.08" data-orientation="down" aria-hidden="true"><img class="site-footer__cube site-footer__cube_2 js-parallax" src="img/footer-cube-2.png" alt="" width="600" height="500" loading="lazy" data-scale="1.1" data-orientation="up" aria-hidden="true">
+      </footer>
+      <div class="cursor" aria-hidden="true"></div>
     </div>
-    <script src="js/app.js"></script>
+    <script src="js/lib/aos.js"></script>
+    <script src="js/lib/simpleParallax.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

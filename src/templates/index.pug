@@ -1,216 +1,220 @@
----
-title: Folio
----
 extends layouts/_layout
+
 block content
-	.main
-		+header
-		.main__bg
-			img.main__pic(src="img/bg-main.jpg" alt="")
-		.main__center.center
-			.main__wrap
-				.main__stage.stage(data-aos="transform") Jack Gross
-				h1.main__title.title.h1
-					span(data-aos="transform" data-aos-delay="150") Hello, my
-					span(data-aos="transform" data-aos-delay="300") name's Jack.
-					span(data-aos="transform" data-aos-delay="450") I'm a Visual
-					span(data-aos="transform" data-aos-delay="600") Designer.
-				a.scroll.js-scroll(href="#details" data-aos="transform")
-					.scroll__icon
-						img.scroll__pic(src="img/scroll.svg" alt="")
-					.scroll__text Scroll down
-		.main__view(data-aos)
-			.main__preview
-				img.main__pic(src="img/main-pic-6.png" alt="")
-			.main__preview
-				img.main__pic.js-parallax(data-scale="2.5" data-orientation="up" src="img/main-pic-1.png" alt="")
-			.main__preview
-				img.main__pic.js-parallax(data-scale="1.5" data-orientation="up" src="img/main-pic-2.png" alt="")
-			.main__preview
-				img.main__pic(src="img/main-pic-3.png" alt="")
-			.main__preview
-				img.main__pic(src="img/main-pic-4.png" alt="")
-			.main__preview
-				img.main__pic.js-parallax(data-scale="4.5" data-orientation="up" src="img/main-pic-5.png" alt="")
-			.main__preview
-				img.main__pic.js-parallax(data-scale="1.5" data-orientation="down" src="img/main-pic-7.png" alt="")
-		.main__figures
-			.main__figure(data-aos="animation-translate-y")
-				img.main__pic.js-parallax(data-scale="2.2" data-orientation="down" src="img/figure-1.png" alt="")
-			.main__figure(data-aos="animation-translate-y" data-aos-delay="200")
-				img.main__pic.js-parallax(data-scale="2.2" data-orientation="up" src="img/figure-2.png" alt="")
-			.main__figure(data-aos="animation-translate-y" data-aos-delay="400")
-				img.main__pic(src="img/figure-3.png" alt="")
-	.details#details
-		.details__center.center
-			.details__head(data-aos="animation-scale-y")
-				.details__stage.stage What I Do
-				h3.details__info.h3 I enjoy creating delightful,  <br>human-centered digital experiences.
-			h2.details__title(data-aos="animation-scale-y") Think. Make. <br>Solve. 
-			.details__btn(data-aos="animation-translate-y")
-				button.btn.btn_purple
-					span.btn__text Contact Me
-					+i('arrow-right')
-			.details__container
-				.details__slider.owl-carousel.js-slider-details
-					.details__item
-						.details__preview.details__preview_cursor(data-aos="animation-scale")
-							.details__img
-								img.details__pic(src="img/cursor.png" alt="")
-						h5.details__category.h5(data-aos="animation-scale-y") User Interface
-						.details__text(data-aos="animation-scale-y") We have got quite a few already made templates for better project management that you can use now.
-						.details__btn(data-aos="animation-scale-y")
-							button.btn.btn_dark Find out more 
-					.details__item
-						.details__preview.details__preview_hand(data-aos="animation-scale" data-aos-delay="150")
-							.details__img
-								img.details__pic(src="img/hand.png" alt="")
-						h5.details__category.h5(data-aos="animation-scale-y" data-aos-delay="150") User Experience
-						.details__text(data-aos="animation-scale-y" data-aos-delay="150") We have got quite a few already made templates for better project management that you can use now.
-						.details__btn(data-aos="animation-scale-y" data-aos-delay="150")
-							button.btn.btn_dark Find out more 
-					.details__item
-						.details__preview.details__preview_color(data-aos="animation-scale" data-aos-delay="300")
-							.details__img
-								img.details__pic(src="img/color-picker.png" alt="")
-						h5.details__category.h5(data-aos="animation-scale-y" data-aos-delay="300") UI Design Kit
-						.details__text(data-aos="animation-scale-y" data-aos-delay="300") We have got quite a few already made templates for better project management that you can use now.
-						.details__btn(data-aos="animation-scale-y" data-aos-delay="300")
-							button.btn.btn_dark Find out more 
-					.details__item
-						.details__preview.details__preview_cursor
-							.details__img
-								img.details__pic(src="img/cursor.png" alt="")
-						h5.details__category.h5 User Interface
-						.details__text We have got quite a few already made templates for better project management that you can use now.
-						button.details__btn.btn.btn_dark Find out more 
-					.details__item
-						.details__preview.details__preview_hand
-							.details__img
-								img.details__pic(src="img/hand.png" alt="")
-						h5.details__category.h5 User Experience
-						.details__text We have got quite a few already made templates for better project management that you can use now.
-						button.details__btn.btn.btn_dark Find out more
-					.details__item
-						.details__preview.details__preview_color
-							.details__img
-								img.details__pic(src="img/color-picker.png" alt="")
-						h5.details__category.h5 UI Design Kit
-						.details__text We have got quite a few already made templates for better project management that you can use now.
-						button.details__btn.btn.btn_dark Find out more
-		.details__figures
-			.details__figure
-				img.details__pic.js-parallax(data-scale="2" data-orientation="down" src="img/figure-1.png" alt="")
-			.details__figure
-				img.details__pic.js-parallax(data-scale="2" data-orientation="up" src="img/figure-2.png" alt="")
-			.details__figure
-				img.details__pic.js-parallax(data-scale="1.2" data-orientation="up" src="img/figure-3.png" alt="")
-		a.details__contact(href="#") Contact me
-	.work
-		.work__circles
-		.work__center.center
-			.work__wrap
-				.work__stage.stage.stage_pink(data-aos="animation-scale-y") Who I Work With
-				h2.work__title.title.h1(data-aos="animation-scale-y" data-aos-delay="150") Art Direction for Global Leading Brands.
-				.work__text(data-aos="animation-scale-y" data-aos-delay="300") I research and create breakthrough - delightful ideas, leading visual designers.
-				a.scroll.js-scroll(data-aos="animation-scale-y" href="#cases")
-					.scroll__icon
-						img.scroll__pic(src="img/scroll.svg" alt="")
-					.scroll__text Scroll down
-		.work__preview
-			img.work__pic.js-parallax(data-scale="2" data-orientation="down" src="img/work-cube.png" alt="")
-		.work__figures(data-aos)
-			.work__figure
-				img.work__pic.js-parallax(data-scale="1.3" data-orientation="up" src="img/work-cube-1.png" alt="")
-			.work__figure
-				img.work__pic.js-parallax(data-scale="1.5" data-orientation="up left" src="img/work-cube-2.png" alt="")
-			.work__figure
-				img.work__pic.js-parallax(data-scale="1.3" data-orientation="up right" src="img/work-cube-3.png" alt="")
-			.work__figure
-				img.work__pic(src="img/work-cube-4.png" alt="")
-			.work__figure
-				img.work__pic.js-parallax(data-scale="1.1" data-orientation="left" src="img/work-cube-5.png" alt="")
-			.work__figure
-				img.work__pic.js-parallax(data-scale="1.2" data-orientation="right" src="img/work-cube-6.png" alt="")
-			.work__figure
-				img.work__pic.js-parallax(data-scale="1.2" data-orientation="down" src="img/work-cube-7.png" alt="")
-	.wrapper.wrapper_gradient
-		.cases.cases_main#cases
-			.cases__center.center
-				.cases__stage.stage(data-aos="animation-scale-y") Portfolio
-				h2.cases__title.h1(data-aos="animation-scale-y" data-aos-delay="150") Look at My <br>Products.
-				.cases__nav(data-aos="animation-scale-y" data-aos-delay="300")
-					a.cases__link.active(href="#") Website
-					a.cases__link(href="#") Illustration
-					a.cases__link(href="#") Mobile
-				.cases__list.js-owl(data-items-mobile-portrait="1" data-items-mobile-album="1" data-autoheight)
-					mixin casesItem(src, delay)
-						a.cases__item(data-aos="animation-translate-y" data-aos-delay=delay href="case.html")
-							.cases__preview
-								img.cases__pic(src=src alt="")
-								.cases__box Case <br>Study
-							.cases__body
-								h4.cases__info.h4 Collab Landing Page
-								.cases__text UI Kit, Coded Template
-					+casesItem('img/cases-pic-1.jpg', '')
-					+casesItem('img/cases-pic-2.jpg', '200')
-					+casesItem('img/cases-pic-3.jpg', '')
-					+casesItem('img/cases-pic-4.jpg', '200')
-					+casesItem('img/cases-pic-5.jpg', '')
-					+casesItem('img/cases-pic-6.jpg', '200')
-			.cases__figures
-				.cases__figure
-					img.cases__pic.js-parallax(data-scale="2" data-orientation="down" src="img/figure-2.png" alt="")
-				.cases__figure
-					img.cases__pic.js-parallax(data-scale="1.8" data-orientation="down" src="img/figure-3.png" alt="")
-		.review
-			.review__center.center
-				.review__stage.stage(data-aos="animation-scale-y") What People Say
-				h2.review__title.title.h1(data-aos="animation-scale-y" data-aos-delay="200") Trusted by <br>Clients.
-				.review__container(data-aos="animation-translate-y" data-aos-delay="400")
-					.review__slider.owl-carousel.js-slider-review
-						.review__item
-							.review__text “ Folio Designer is a clean and creative landing page that matches with any freelancer or designer, you can easily to build the page in Sketch or Figma.”
-							.review__author
-								.review__ava
-									img.review__pic(src="img/ava-1.jpg" alt="")
-								.review__details
-									.review__man.h5 Dash
-									.review__company UI8
-						.review__item
-							.review__text “ Folio Designer is a clean and creative landing page that matches with any freelancer or designer, you can easily to build the page in Sketch or Figma.”
-							.review__author
-								.review__ava
-									img.review__pic(src="img/ava-1.jpg" alt="")
-								.review__details
-									.review__man.h5 Dash
-									.review__company UI8
-						.review__item
-							.review__text “ Folio Designer is a clean and creative landing page that matches with any freelancer or designer, you can easily to build the page in Sketch or Figma.”
-							.review__author
-								.review__ava
-									img.review__pic(src="img/ava-1.jpg" alt="")
-								.review__details
-									.review__man.h5 Dash
-									.review__company UI8
-						.review__item
-							.review__text “ Folio Designer is a clean and creative landing page that matches with any freelancer or designer, you can easily to build the page in Sketch or Figma.”
-							.review__author
-								.review__ava
-									img.review__pic(src="img/ava-1.jpg" alt="")
-								.review__details
-									.review__man.h5 Dash
-									.review__company UI8
-			.review__bg
-				.review__preview
-					img.review__pic.js-parallax(data-scale="1.5" data-orientation="down" src="img/review-cube.png" alt="")
-				.review__preview
-					img.review__pic(src="img/review-cube.png" alt="")
-		+wrapperDark
+  a.skip-link(href="#about") Skip to main content
+  header.site-header#top
+    .center.site-header__inner
+      a.brand.js-scroll(href="#top" aria-label="Vishwa S — home") VS
+      nav.site-nav(aria-label="Primary navigation")
+        button.site-nav__toggle.js-nav-toggle(type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open navigation menu")
+          span
+          span
+        ul.site-nav__menu.js-nav-menu#site-menu
+          li: a.js-scroll(href="#about") About
+          li: a.js-scroll(href="#experience") Experience
+          li: a.js-scroll(href="#work") Work
+          li: a.js-scroll(href="#skills") Skills
+          li: a.js-scroll(href="#contact") Contact
 
+  main
+    section.hero(aria-labelledby="hero-title")
+      img.hero__background(src="img/bg-main.jpg" alt="" width="1440" height="1000" aria-hidden="true")
+      .center.hero__content
+        .hero__copy
+          p.hero__name(data-aos="transform") Vishwa S
+          h1.hero__title#hero-title
+            span(data-aos="transform" data-aos-delay="100") Software Developer building
+            span(data-aos="transform" data-aos-delay="200") scalable enterprise applications
+            span(data-aos="transform" data-aos-delay="300") with Angular and ASP.NET Core.
+          p.hero__description(data-aos="animation-translate-y" data-aos-delay="400") I build responsive frontends, secure REST APIs, real-time workflows and maintainable distributed systems using Angular, .NET, Clean Architecture and CQRS.
+          .hero__actions(data-aos="animation-translate-y" data-aos-delay="500")
+            a.btn.btn_purple.js-scroll(href="#work") View My Work
+            a.btn.btn_dark(href="resume/Vishwa-S-Resume.pdf" download) Download Resume
+      .hero__art(data-aos="hero-cubes" aria-hidden="true")
+        .hero__layer-wrap.hero__layer-wrap_1
+          img.hero__layer.hero__layer_1(src="img/main-pic-6.png" alt="")
+        .hero__layer-wrap.hero__layer-wrap_2
+          img.hero__layer.hero__layer_2.js-parallax(src="img/main-pic-1.png" alt="" data-scale="2.5" data-orientation="up")
+        .hero__layer-wrap.hero__layer-wrap_3
+          img.hero__layer.hero__layer_3.js-parallax(src="img/main-pic-2.png" alt="" data-scale="1.5" data-orientation="up")
+        .hero__layer-wrap.hero__layer-wrap_4
+          img.hero__layer.hero__layer_4(src="img/main-pic-3.png" alt="")
+        .hero__layer-wrap.hero__layer-wrap_5
+          img.hero__layer.hero__layer_5(src="img/main-pic-4.png" alt="")
+        .hero__layer-wrap.hero__layer-wrap_6
+          img.hero__layer.hero__layer_6.js-parallax(src="img/main-pic-5.png" alt="" data-scale="4.5" data-orientation="up")
+        .hero__layer-wrap.hero__layer-wrap_7
+          img.hero__layer.hero__layer_7.js-parallax(src="img/main-pic-7.png" alt="" data-scale="1.5" data-orientation="down")
 
+    section.section.section_light#about(aria-labelledby="about-title")
+      .center
+        .section-heading(data-aos="animation-scale-y")
+          p.eyebrow Core expertise
+          h2.section-title#about-title Engineering clear, dependable products.
+          p.section-intro Software Developer specializing in Angular and ASP.NET Core, building secure, scalable and maintainable enterprise applications.
+        .expertise-grid
+          article.expertise-card.expertise-card_purple(data-aos="animation-translate-y")
+            span.card-number 01
+            h3 Angular Frontend Engineering
+            p Responsive enterprise interfaces using Angular, TypeScript, RxJS, Reactive Forms, reusable components, SCSS, PrimeNG and Jest.
+          article.expertise-card.expertise-card_orange(data-aos="animation-translate-y" data-aos-delay="120")
+            span.card-number 02
+            h3 ASP.NET Core Backend Engineering
+            p Secure REST APIs and maintainable backend services using C#, ASP.NET Core, Entity Framework Core, LINQ, Clean Architecture, CQRS and MediatR.
+          article.expertise-card.expertise-card_yellow(data-aos="animation-translate-y" data-aos-delay="240")
+            span.card-number 03
+            h3 Distributed Systems and Application Reliability
+            p Real-time and distributed solutions using SignalR, RabbitMQ, gRPC, Redis, YARP, Serilog, retries, Dead Letter Queues and correlation IDs.
 
+    section.section.section_dark.experience#experience(aria-labelledby="experience-title")
+      .center
+        .section-heading(data-aos="animation-scale-y")
+          p.eyebrow Experience
+          h2.section-title#experience-title Building production software across the stack.
+        .timeline
+          article.timeline__item(data-aos="animation-translate-y")
+            .timeline__marker(aria-hidden="true")
+            p.timeline__period August 2024 – Present
+            h3 Software Developer
+            p.timeline__company Propel Technology Group Inc.
+            p Contributing across the software development lifecycle by building enterprise applications with Angular and ASP.NET Core. Developing reusable frontend components, secure REST APIs, scalable backend services and reliable distributed workflows while following Clean Architecture, CQRS and engineering best practices.
+          article.timeline__item(data-aos="animation-translate-y" data-aos-delay="150")
+            .timeline__marker(aria-hidden="true")
+            p.timeline__period July 2023 – September 2023
+            h3 Web Development Intern
+            p.timeline__company DLK Technologies India Private Limited
+            p Developed a secure messaging platform with LDAP Active Directory authentication and JWT verification. The work increased user engagement by 75% and reduced manual input by 50%.
 
+    section.work-intro
+      .center
+        .work-intro__copy
+          p.eyebrow Selected work
+          h2.work-intro__title Building reliable software from interface to infrastructure.
+          p.work-intro__text Practical engineering across responsive interfaces, secure APIs and distributed workflows.
+      .work-intro__art(data-aos="animation-scale" aria-hidden="true")
+        img.work-intro__layer.work-intro__layer_1.js-parallax(src="img/work-cube-1.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.08" data-orientation="up")
+        img.work-intro__layer.work-intro__layer_2.js-parallax(src="img/work-cube-2.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.1" data-orientation="up left")
+        img.work-intro__layer.work-intro__layer_3.js-parallax(src="img/work-cube-3.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.12" data-orientation="up right")
+        img.work-intro__layer.work-intro__layer_4(src="img/work-cube-4.png" alt="" width="1300" height="900" loading="lazy")
+        img.work-intro__layer.work-intro__layer_5.js-parallax(src="img/work-cube-5.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.08" data-orientation="left")
+        img.work-intro__layer.work-intro__layer_6.js-parallax(src="img/work-cube-6.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.1" data-orientation="right")
+        img.work-intro__layer.work-intro__layer_7.js-parallax(src="img/work-cube-7.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.12" data-orientation="down")
 
+    section.section.section_gradient#work(aria-labelledby="work-title")
+      .center
+        .section-heading(data-aos="animation-scale-y")
+          p.eyebrow Featured work
+          h2.section-title#work-title Relevant products and contributions.
+        .project-list
+          article.project-card(data-aos="animation-translate-y")
+            .project-card__visual.project-card__visual_purple(aria-hidden="true")
+              .project-card__orbit
+              img.project-cube.project-cube_partner-main.js-parallax(src="img/work-cube-5.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.08" data-orientation="up")
+              img.project-cube.project-cube_partner-accent.js-parallax(src="img/work-cube-1.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.1" data-orientation="down")
+              span.project-card__visual-title Enterprise Platform
+            .project-card__body
+              p.project-card__label Professional Work – Details Only
+              h3 Partner Taxation Platform
+              p An enterprise taxation platform developed using Angular and ASP.NET Core, with complex business workflows, secure APIs, real-time updates and distributed service communication.
+              h4 Contribution highlights
+              ul.check-list
+                li Built reusable Angular components using RxJS, custom directives and Reactive Forms
+                li Reduced application load time by 40% and CSS redundancy by 30%
+                li Maintained more than 95% Jest unit-test coverage
+                li Implemented SignalR real-time updates and D3.js visualizations
+                li Built secure REST APIs with JWT and permission-based authorization
+                li Used CQRS, MediatR, Clean Architecture, gRPC, RabbitMQ and Redis
+                li Added retry mechanisms, Dead Letter Queues and distributed correlation IDs
+                li Integrated Serilog, FluentValidation, centralized exception handling and Swagger/OpenAPI
+          article.project-card.project-card_reverse(data-aos="animation-translate-y")
+            .project-card__visual.project-card__visual_orange(aria-hidden="true")
+              .project-card__orbit
+              img.project-cube.project-cube_leave-main.js-parallax(src="img/work-cube-7.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.08" data-orientation="down")
+              img.project-cube.project-cube_leave-accent.js-parallax(src="img/work-cube-4.png" alt="" width="1300" height="900" loading="lazy" data-scale="1.1" data-orientation="up")
+              span.project-card__visual-title LeaveTrack
+            .project-card__body
+              p.project-card__label In Development
+              h3 LeaveTrack
+              p A role-based leave-management system for Admins, Managers and Employees, built with Angular, ASP.NET Core, PostgreSQL and Entity Framework Core.
+              h4 Capabilities
+              ul.check-list
+                li Employee, manager and hierarchy management
+                li Leave requests, balances, approval and rejection workflows
+                li JWT authentication and permission-based authorization
+                li SignalR real-time notifications
+                li Clean Architecture and CQRS with MediatR
+                li Redis caching and YARP API Gateway
+                li Optimistic concurrency for competing approvals
+                li Swagger/OpenAPI documentation, Jest and backend automated testing
 
+    section.section.section_light#skills(aria-labelledby="skills-title")
+      .center
+        .section-heading(data-aos="animation-scale-y")
+          p.eyebrow Skills
+          h2.section-title#skills-title A focused enterprise application toolkit.
+        .skills-grid
+          article.skill-group(data-aos="animation-translate-y")
+            h3 Frontend
+            p Angular · TypeScript · JavaScript · RxJS · Reactive Forms · PrimeNG · HTML · CSS · SCSS · Jest · D3.js
+          article.skill-group(data-aos="animation-translate-y" data-aos-delay="80")
+            h3 Backend
+            p C# · ASP.NET Core · RESTful APIs · Microservices · Clean Architecture · CQRS · MediatR · Entity Framework Core · LINQ · FluentValidation
+          article.skill-group(data-aos="animation-translate-y" data-aos-delay="160")
+            h3 Distributed systems
+            p RabbitMQ · gRPC · SignalR · Redis · YARP API Gateway · Correlation IDs · Retry Patterns · Dead Letter Queues
+          article.skill-group(data-aos="animation-translate-y")
+            h3 Security and observability
+            p JWT · Role-Based Access Control · Permission-Based Authorization · Serilog · Centralized Exception Handling · Swagger/OpenAPI
+          article.skill-group(data-aos="animation-translate-y" data-aos-delay="80")
+            h3 Databases and tools
+            p PostgreSQL · Oracle SQL · MySQL · GitHub · GitLab · Azure DevOps · Agile
 
+    section.section.section_contact#contact(aria-labelledby="contact-title")
+      .center.contact-layout
+        .contact-copy
+          p.eyebrow(data-aos="animation-scale-y") Contact
+          h2.section-title#contact-title(data-aos="animation-scale-y" data-aos-delay="100") Let’s build something dependable.
+          p(data-aos="animation-translate-y" data-aos-delay="200") Have a role, product or freelance project in mind? Send the details and I’ll get back to you.
+          address.contact-details(data-aos="animation-translate-y" data-aos-delay="250")
+            a(href="mailto:vishwajayanth3@gmail.com") vishwajayanth3@gmail.com
+            a(href="tel:+919345321016") +91 9345321016
+            span Tamil Nadu, India
+            a(href="https://github.com/Vishwa2706" target="_blank" rel="noopener noreferrer") GitHub
+            a(href="https://www.linkedin.com/in/vishwa-settu/" target="_blank" rel="noopener noreferrer") LinkedIn
+        form.contact-form.js-contact-form(data-aos="animation-translate-y" data-aos-delay="150" novalidate)
+          .form-field
+            label(for="name") Name
+            input#name(type="text" name="name" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="name-error")
+            span.form-error#name-error
+          .form-field
+            label(for="email") Email
+            input#email(type="email" name="email" autocomplete="email" required maxlength="254" aria-describedby="email-error")
+            span.form-error#email-error
+          .form-field
+            label(for="subject") Subject or enquiry type
+            input#subject(type="text" name="subject" required minlength="3" maxlength="120" aria-describedby="subject-error")
+            span.form-error#subject-error
+          .form-field.form-field_honeypot(aria-hidden="true")
+            label(for="companyWebsite") Company website
+            input#companyWebsite(type="text" name="companyWebsite" tabindex="-1" autocomplete="off")
+          .form-field
+            label(for="message") Message
+            textarea#message(name="message" required minlength="10" maxlength="3000" rows="6" aria-describedby="message-error")
+            span.form-error#message-error
+          button.btn.btn_purple.form-submit(type="submit") Send Message
+          p.form-status.js-form-status(role="status" aria-live="polite")
+          p.form-fallback If the form is unavailable, email me directly at #[a(href="mailto:vishwajayanth3@gmail.com") vishwajayanth3@gmail.com].
+      .contact-art(data-aos="animation-scale" aria-hidden="true")
+        img.contact-art__layer.contact-art__layer_1(src="img/figures-1.png" alt="" width="900" height="700" loading="lazy")
+        img.contact-art__layer.contact-art__layer_2.js-parallax(src="img/figures-2.png" alt="" width="900" height="700" loading="lazy" data-scale="1.08" data-orientation="up")
+        img.contact-art__layer.contact-art__layer_3.js-parallax(src="img/figures-3.png" alt="" width="900" height="700" loading="lazy" data-scale="1.1" data-orientation="down")
+        img.contact-art__layer.contact-art__layer_4(src="img/figures-4.png" alt="" width="900" height="700" loading="lazy")
+        img.contact-art__layer.contact-art__layer_5.js-parallax(src="img/figures-5.png" alt="" width="900" height="700" loading="lazy" data-scale="1.12" data-orientation="up")
+        img.contact-art__layer.contact-art__layer_6.js-parallax(src="img/figures-6.png" alt="" width="900" height="700" loading="lazy" data-scale="1.08" data-orientation="down")
+
+  footer.site-footer
+    .center.site-footer__inner
+      p © #[span.js-year] Vishwa S. Built with care.
+      a.js-scroll(href="#top") Back to top
+    img.site-footer__cube.site-footer__cube_1.js-parallax(src="img/footer-cube-1.png" alt="" width="600" height="500" loading="lazy" data-scale="1.08" data-orientation="down" aria-hidden="true")
+    img.site-footer__cube.site-footer__cube_2.js-parallax(src="img/footer-cube-2.png" alt="" width="600" height="500" loading="lazy" data-scale="1.1" data-orientation="up" aria-hidden="true")
