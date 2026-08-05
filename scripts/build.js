@@ -4,7 +4,9 @@ const path = require("node:path");
 const pug = require("pug");
 const sass = require("sass");
 
-const root = path.resolve(__dirname, "..");
+// npm and Vercel run this script from the project root. Using cwd keeps the
+// generated directory aligned with Vercel's configured outputDirectory.
+const root = process.cwd();
 const source = path.join(root, "src");
 const output = path.join(root, "public");
 const watch = process.argv.includes("--watch");
@@ -57,7 +59,10 @@ function build() {
     fs.copyFileSync(resumeSource, path.join(output, "resume", "Vishwa-S-Resume.pdf"));
   }
 
-  console.log(`Built portfolio in ${production ? "production" : "development"} mode.`);
+  if (!fs.existsSync(path.join(output, "index.html"))) {
+    throw new Error(`Build output was not created at ${output}`);
+  }
+  console.log(`Built portfolio in ${production ? "production" : "development"} mode at ${output}.`);
 }
 
 build();
