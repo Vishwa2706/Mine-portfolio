@@ -117,6 +117,16 @@ a.btn
   display: inline-flex
   justify-content: center
   align-items: center
+
+.btn__download
+  width: 16px
+  height: 16px
+  margin-right: 7px
+  fill: none
+  stroke: currentColor
+  stroke-width: 2
+  stroke-linecap: round
+  stroke-linejoin: round
   
 .h1,
 .h2,
@@ -3437,11 +3447,11 @@ html:not(.aos-ready) [data-aos]
       position: relative
       z-index: 2
       display: grid
-      gap: 7px
-      width: 52px
-      height: 52px
-      padding: 16px 12px
-      border-radius: 14px
+      gap: 5px
+      width: 44px
+      height: 44px
+      padding: 13px 10px
+      border-radius: 12px
       background: $dark
       span
         display: block
@@ -3473,29 +3483,49 @@ html:not(.aos-ready) [data-aos]
         color: $wh
         font-size: 28px
   .hero
-    min-height: 850px
+    min-height: 820px
     align-items: flex-start
+    &__background
+      object-position: left center
     &__copy
       width: 100%
-      padding-top: 130px
+      padding: 132px 0 220px
     &__title
-      margin-top: 18px
-      font-size: clamp(32px, 8.5vw, 40px)
-      letter-spacing: -1.4px
+      max-width: 340px
+      margin: 16px 0 20px
+      font-size: clamp(27px, 7.5vw, 31px)
+      line-height: 1.08
+      letter-spacing: -.8px
+      span
+        display: inline
+        &:not(:last-child):after
+          content: " "
     &__description
-      font-size: 17px
+      max-width: 340px
+      font-size: 15px
+      line-height: 1.65
     &__actions
-      align-items: stretch
-      flex-direction: column
-      width: min(100%, 300px)
+      display: grid
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+      gap: 10px
+      width: min(100%, 292px)
+      margin-top: 24px
       .btn
         width: 100%
+        min-width: 0
+        height: 40px
+        padding: 0 8px
+        font-size: 11.5px
     &__art
-      right: -30%
-      bottom: -12%
-      width: 90%
-      height: 48%
-      opacity: .45
+      top: auto
+      right: -24%
+      bottom: -7%
+      width: 86%
+      height: auto
+      opacity: .4
+  .hero__name
+    font-size: 17px
+    letter-spacing: 2.4px
   .section
     padding: 82px 0
   .section-heading
@@ -3562,7 +3592,7 @@ html:not(.aos-ready) [data-aos]
   .center
     padding: 0 18px
   .hero__title
-    font-size: 37px
+    font-size: 27px
 
 @media (prefers-reduced-motion: reduce)
   html

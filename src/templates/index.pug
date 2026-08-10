@@ -29,7 +29,12 @@ block content
           p.hero__description(data-aos="animation-translate-y" data-aos-delay="400") I build responsive frontends, secure REST APIs, real-time workflows and maintainable distributed systems using Angular, .NET, Clean Architecture and CQRS.
           .hero__actions(data-aos="animation-translate-y" data-aos-delay="500")
             a.btn.btn_purple.js-scroll(href="#work") View My Work
-            a.btn.btn_dark(href="resume/Vishwa-S-Resume.pdf" download) Download Resume
+            a.btn.btn_dark(href="resume/Vishwa-S-Resume.pdf" download aria-label="Download resume")
+              svg.btn__download(viewBox="0 0 24 24" aria-hidden="true" focusable="false")
+                path(d="M12 3v12")
+                path(d="m7 10 5 5 5-5")
+                path(d="M5 21h14")
+              span Resume
       .hero__art(data-aos="hero-cubes" aria-hidden="true")
         .hero__layer-wrap.hero__layer-wrap_1
           img.hero__layer.hero__layer_1(src="img/main-pic-6.png" alt="")
