@@ -34,7 +34,7 @@ function build() {
   const html = pug.renderFile(path.join(source, "templates", "index.pug"), {
     filename: path.join(source, "templates", "index.pug"),
     pretty: !production,
-    title: "Vishwa S | Angular & ASP.NET Core Software Developer"
+    title: "Vishwa S | Angular, React & ASP.NET Core Software Developer"
   });
   fs.writeFileSync(path.join(output, "index.html"), html);
 

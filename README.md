@@ -1,6 +1,6 @@
 # Vishwa S — Software Developer Portfolio
 
-Professional static portfolio for Vishwa S, focused on Angular, ASP.NET Core and enterprise application engineering. `src/` is the single source of truth; `public/` is generated and is the Vercel output directory.
+Professional static portfolio for Vishwa S, focused on Angular, React.js, ASP.NET Core and enterprise application engineering. `src/` is the single source of truth; `public/` is generated and is the Vercel output directory.
 
 ## Local development
 

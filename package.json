@@ -2,7 +2,7 @@
   "name": "vishwa-s-portfolio",
   "version": "2.0.0",
   "private": true,
-  "description": "Professional portfolio for Vishwa S, an Angular and ASP.NET Core Software Developer.",
+  "description": "Professional portfolio for Vishwa S, an Angular, React.js and ASP.NET Core Software Developer.",
   "scripts": {
     "dev": "node scripts/build.js --watch",
     "build:dev": "node scripts/build.js",
